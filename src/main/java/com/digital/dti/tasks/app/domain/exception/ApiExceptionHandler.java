@@ -1,4 +1,4 @@
-package com.digital.dti.tasks.app.domain.exceptionHandler;
+package com.digital.dti.tasks.app.domain.exception;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.ControllerAdvice;

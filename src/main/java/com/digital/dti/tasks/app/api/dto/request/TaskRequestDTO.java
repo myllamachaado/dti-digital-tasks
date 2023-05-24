@@ -2,6 +2,7 @@ package com.digital.dti.tasks.app.api.dto.request;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,16 +10,13 @@ import java.time.OffsetDateTime;
 
 @Getter
 @Setter
-public class TaskReqDTO {
+public class TaskRequestDTO {
 
     @Valid
     @NotBlank
-    private Long idTask;
+    private String nome;
 
     @Valid
-    @NotBlank
-    private String nomeTask;
-
-    @NotBlank
-    private OffsetDateTime dataTask;
+    @NotNull
+    private OffsetDateTime data;
 }

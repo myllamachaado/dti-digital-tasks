@@ -1,13 +1,14 @@
 package com.digital.dti.tasks.app.domain.service;
 
-import com.digital.dti.tasks.app.domain.exceptionHandler.exceptions.EntidadeNaoEncontrada;
 import com.digital.dti.tasks.app.domain.model.Task;
 import com.digital.dti.tasks.app.domain.repository.TaskRepository;
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @AllArgsConstructor
 @Service
@@ -24,13 +25,15 @@ public class TaskService {
         return taskRepository.findAll();
     }
 
-    public Task buscaTask(Long idTask){
-        return taskRepository.findById(idTask)
-                .orElseThrow(() -> new EntidadeNaoEncontrada("Task não encontrada."));
+    public Optional<Task> buscaTask(Long idTask){
+        return taskRepository.findById(idTask);
     }
 
     @Transactional
     public void deletarTask(Long idTask){
+        if(!this.buscaTask(idTask).isPresent()){
+            throw new EntityNotFoundException("Task não existe.");
+        }
         taskRepository.deleteById(idTask);
     }
 

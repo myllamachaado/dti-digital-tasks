@@ -1,4 +1,4 @@
-package com.digital.dti.tasks.app.domain.exceptionHandler.exceptions;
+package com.digital.dti.tasks.app.domain.exception.exceptions;
 
 public class EntidadeNaoEncontrada extends RuntimeException{
     public EntidadeNaoEncontrada(String message) {
