@@ -59,7 +59,7 @@ o Lista de lembretes
 
 ## Endpoints
 
-A collection do Postman com todos os endpoints se econtra em [/postman](https://github.com/myllamachaado/dti-digital-tasks/tree/master/postman)
+A collection do Postman com todos os endpoints se econtra em [/postman](https://github.com/myllamachaado/dti-digital-tasks/tree/master/postman), Basta importar o arquivo no Postman para a validação backend.
 
 
 ## Comandos para rodar o projeto:
