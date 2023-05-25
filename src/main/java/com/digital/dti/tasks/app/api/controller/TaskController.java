@@ -3,6 +3,7 @@ package com.digital.dti.tasks.app.api.controller;
 import com.digital.dti.tasks.app.api.assembler.TaskAssembler;
 import com.digital.dti.tasks.app.api.dto.request.TaskRequestDTO;
 import com.digital.dti.tasks.app.api.dto.response.TaskResponseDTO;
+import com.digital.dti.tasks.app.domain.exceptionHandler.exceptions.EntidadeNaoEncontradaException;
 import com.digital.dti.tasks.app.domain.model.Task;
 import com.digital.dti.tasks.app.domain.service.TaskService;
 import jakarta.validation.Valid;
@@ -30,7 +31,7 @@ public class TaskController {
     public ResponseEntity<TaskResponseDTO> buscar(@PathVariable Long idTask){
         return taskService.buscaTask(idTask)
                 .map(task -> ResponseEntity.ok(taskAssembler.toModel(task)))
-                .orElse(ResponseEntity.notFound().build());
+                .orElseThrow(() -> new EntidadeNaoEncontradaException("Task não existe."));
     }
 
     @PostMapping

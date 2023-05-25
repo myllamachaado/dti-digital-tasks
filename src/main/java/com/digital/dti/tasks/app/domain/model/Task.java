@@ -5,13 +5,9 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
-import java.time.LocalDateTime;
-import java.time.OffsetDateTime;
+import java.time.LocalDate;
 
 @ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
@@ -31,6 +27,6 @@ public class Task {
     private String nome;
 
     @NotNull
-    private OffsetDateTime data;
+    private LocalDate data;
 
 }

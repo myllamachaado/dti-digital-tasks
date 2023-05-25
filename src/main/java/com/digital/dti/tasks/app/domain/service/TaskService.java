@@ -1,8 +1,8 @@
 package com.digital.dti.tasks.app.domain.service;
 
+import com.digital.dti.tasks.app.domain.exceptionHandler.exceptions.EntidadeNaoEncontradaException;
 import com.digital.dti.tasks.app.domain.model.Task;
 import com.digital.dti.tasks.app.domain.repository.TaskRepository;
-import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ public class TaskService {
     }
 
     public List<Task> listaTasks(){
-        return taskRepository.findAll();
+        return taskRepository.findAllByOrderByDataAsc();
     }
 
     public Optional<Task> buscaTask(Long idTask){
@@ -32,7 +32,7 @@ public class TaskService {
     @Transactional
     public void deletarTask(Long idTask){
         if(!this.buscaTask(idTask).isPresent()){
-            throw new EntityNotFoundException("Task não existe.");
+            throw new EntidadeNaoEncontradaException("Lembrete não existe.");
         }
         taskRepository.deleteById(idTask);
     }
