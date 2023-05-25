@@ -64,9 +64,10 @@ A collection do Postman com todos os endpoints se econtra em [/postman](https://
 
 ## Comandos para rodar o projeto:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-
-
+<p>No Terminal/Console:</p>
+<ol>
+	<li>Faça um clone do projeto na sua máquina: <code>git clone https://github.com/myllamachaado/dti-digital-tasks.git</code></li>
+	<li>Entre na pasta raiz do projeto: <code>cd </code></li> 
+	<li>Execute o comando: <code>./gradlew bootrun</code></li>
+</ol>
+<h6>** Visando facilitar a demostração da aplicação, recomendo instalar apenas o IntelliJ IDEA e executar o projeto através da IDE **</h6>
