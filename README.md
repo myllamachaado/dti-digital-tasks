@@ -56,6 +56,7 @@ o Lista de lembretes
 
 
 ## Interface
+O frontend foi feito na linguagem Angular e pode ser acessado [aqui](https://github.com/myllamachaado/dti-digital-task-frontend).
    
 ![Frontend projeto Lembretes Dti Digital](https://github.com/myllamachaado/dti-digital-task-frontend/blob/master/src/interface_angular.png)     
 
