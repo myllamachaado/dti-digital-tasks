@@ -4,6 +4,9 @@
     <a alt="Java">
           <img src="https://img.shields.io/badge/Java-v17-blue.svg" />
     </a>
+<a alt="Spring Boot">
+        <img src="https://img.shields.io/badge/Spring_Boot-v3.1.0-red.svg" />
+    </a>
     <a alt="JPA">
         <img src="https://img.shields.io/badge/JPA-v3.1.0-brightgreen.svg" />
     </a>
